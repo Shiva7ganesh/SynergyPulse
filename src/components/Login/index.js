@@ -5,7 +5,11 @@ import './index.css'
 const Login = () => {
 
     return (
-        <div className="container">
+        <div className='login-container'>
+            <div className='img-container'>
+                    
+            </div>
+            <div className="container">
             <div className="form-section">
                 <div className="form-wrapper">
                     <div className="logo-container">
@@ -42,6 +46,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

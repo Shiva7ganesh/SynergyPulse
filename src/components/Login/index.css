@@ -8,14 +8,8 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Roboto, sans-serif;
-  background-color: #242d34;
-  color: #e7e9ea;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.divider {
+  margin: 15px 0px;
 }
 
 button {
@@ -25,22 +19,26 @@ button {
   background: none;
   cursor: pointer;
 }
+
+.img-container {
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fe6%2Fac%2Fe2%2Fe6ace297a442dec29fdb9d592d6f5760.jpg&f=1&nofb=1&ipt=516ac6cc91cbcdae9f408cf49ae2b16771b24a4c446a7add14b5d5d90b355a61&ipo=images');
+  width: 60vw;
+  background-size: cover;
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
 .container {
-  max-width: 600px;
-  width: 100%;
+  width: 40vw;
   background-color: #000;
   padding: 24px 20px;
-  border-radius: 16px;
-  margin-inline: 2rem;
-
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
@@ -59,15 +57,12 @@ a {
   padding: 7px 11px;
   border-radius: 50%;
 }
-.close-button:hover {
-  background-color: #212222;
-}
+
 .logo {
   font-size: 30px;
 }
 
 .content {
-  width: 300px;
   text-align: center;
   margin-inline: auto;
 }
@@ -167,8 +162,8 @@ input:focus + label {
 }
 .Logoimg
 {
-    width: 200px;
-  margin: auto;
+  width: 400px;
+  margin: 0px;
   
 }
 .logo-container{
@@ -177,4 +172,9 @@ input:focus + label {
 
 .google{
 width: 24px;
+}
+
+.login-container {
+  display: flex;
+  height: 100vh;
 }
