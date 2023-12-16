@@ -4,7 +4,12 @@ import './index.css'
 const Home = () => {
 
     return (
-        <Header />
+        <>
+            <Header />
+            <div className='home-container'>
+
+            </div>
+        </>
     )
 }
 
