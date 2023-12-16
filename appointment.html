@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="appointment.css">
+</head>
+<body>
+ <h1>Book Your Appointment</h1>
+ <form id="appointmentForm">
+   <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="weight">Weight:</label>
+      <input type="number" id="weight" name="weight" required>
+
+    <label for="date">Date:</label><br>
+    <input type="date" id="date" name="date"><br>
+
+    <label for="time">Time:</label><br>
+    <input type="time" id="time" name="time"><br>
+
+    <label for="doctor">Doctor:</label><br>
+    <select id="doctor" name="doctor">
+      <option value="doctor1">Dr. Sai Karthikeya</option>
+      <option value="doctor2">Dr. Shiva Ganesh Reddy </option>
+      <option value="doctor3">Dr. Anvesh</option>
+      <option value="doctor4">Dr. Rishik Reddy</option>
+    </select><br>
+    
+    <label for="reason">Reason:</label><br>
+    <textarea id="reason" name="reason" rows="4" cols="50"></textarea><br>
+
+    <input type="submit" value="Submit">
+ </form>
+</body>
