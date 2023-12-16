@@ -1,9 +1,15 @@
+import Header from '../Header'
 import './index.css'
 
 const Home = () => {
 
     return (
-        <h1>Home</h1>
+        <>
+            <Header />
+            <div className='home-container'>
+
+            </div>
+        </>
     )
 }
 

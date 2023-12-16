@@ -8,8 +8,14 @@
   box-sizing: border-box;
 }
 
-.divider {
-  margin: 15px 0px;
+body {
+  font-family: Roboto, sans-serif;
+  background-color: #242d34;
+  color: #e7e9ea;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
@@ -19,26 +25,22 @@ button {
   background: none;
   cursor: pointer;
 }
-
-.img-container {
-  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fe6%2Fac%2Fe2%2Fe6ace297a442dec29fdb9d592d6f5760.jpg&f=1&nofb=1&ipt=516ac6cc91cbcdae9f408cf49ae2b16771b24a4c446a7add14b5d5d90b355a61&ipo=images');
-  width: 60vw;
-  background-size: cover;
-}
-
 a {
   text-decoration: none;
   color: inherit;
 }
 
 .container {
-  width: 40vw;
+  max-width: 600px;
+  width: 100%;
   background-color: #000;
   padding: 24px 20px;
+  border-radius: 16px;
+  margin-inline: 2rem;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .header {
@@ -57,12 +59,15 @@ a {
   padding: 7px 11px;
   border-radius: 50%;
 }
-
+.close-button:hover {
+  background-color: #212222;
+}
 .logo {
   font-size: 30px;
 }
 
 .content {
+  width: 300px;
   text-align: center;
   margin-inline: auto;
 }
@@ -108,7 +113,31 @@ a {
 .sign-in-button object {
   width: 24px;
   height: 24px;
-}.email-log-in {
+}
+
+.divider {
+  width: 100%;
+  margin-block: 20px;
+  position: relative;
+}
+.divider p::before,
+.divider p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45%;
+  height: 1px;
+  background-color: #333639;
+}
+.divider p::before {
+  left: 0;
+}
+.divider p::after {
+  right: 0;
+}
+
+.email-log-in {
   width: 100%;
   position: relative;
 }
@@ -162,19 +191,10 @@ input:focus + label {
 }
 .Logoimg
 {
-  width: 400px;
-  margin: 0px;
+  width: 200px;
+  margin: auto;
   
 }
 .logo-container{
   text-align: center;
-}
-
-.google{
-width: 24px;
-}
-
-.login-container {
-  display: flex;
-  height: 100vh;
 }
