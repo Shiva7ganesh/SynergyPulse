@@ -1,38 +1,32 @@
-import { useState } from 'react'
-import { getAuth, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { auth, googleProvider } from '../../config/firebase'
+import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
+import { useState } from 'react'
 import Google from '../../res/Google.png'
 import Logo from '../../res/Synergy_Pulse.png'
 import './index.css'
 
-const Login = () => {
+const SignUp = () => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    console.log('signup')
+    const signUp = async () => {
+        try {
+            await createUserWithEmailAndPassword(auth, email, password)
+            console.log('signed up ' + auth.currentUser.email)
+        } catch (e) {
+            console.log(e)
+        }
+       
+    }
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-
-    const signInWithGoogle = async () => {
+    const signUpWithGoogle = async () => {
         try {
             await signInWithPopup(auth, googleProvider)
         } catch (e) {
             console.log(e)
         }
+       
     }
-
-    const handleSignIn = async () => {
-        const auth = getAuth();
-
-        try {
-        const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        const user = userCredential.user;
-        // Handle successful login, you may redirect or perform additional actions.
-        console.log('Logged in successfully', user);
-        } catch (error) {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // Handle error, you may show an error message to the user.
-        console.error('Error signing in', errorCode, errorMessage);
-        }
-    };
 
     return (
         <div className='login-container'>
@@ -48,12 +42,12 @@ const Login = () => {
                         </a>
                     </div>
                     <div className="content">
-                        <h1>Log in to SynergyPulse</h1>
+                        <h1>Sign up into SynergyPulse</h1>
 
                         <div className="action-buttons">
-                            <button className="primary-button sign-in-button" onClick={signInWithGoogle}>
+                            <button className="primary-button sign-in-button" onClick={signUpWithGoogle}>
                                 <img src={Google} className='google' />
-                                <span>Sign in with Google</span>
+                                <span>Sign up with Google</span>
                             </button>
                         </div>
 
@@ -65,17 +59,17 @@ const Login = () => {
                             <input type="text" id="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                             <label htmlFor="email">Email</label>
                         </div>
-                        <div className="email-log-in">  
+                        <div className="email-log-in">
                             <input type="password" id="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                             <label htmlFor="password">Password</label>
                         </div>
+
                         <div className="action-buttons">
-                            <button className="primary-button" onClick={handleSignIn}>Next</button>
-                            <button className="secondary-button">Forgot Password?</button>
+                            <button className="primary-button" onClick={signUp}>Next</button>
                         </div>
                     </div>
                     <div className="sign-up">
-                        <p>Don't have an account? <a href="#">Sign up</a></p>
+                        <p>Aready have an account? <a href="#">Login</a></p>
                     </div>
                 </div>
             </div>
@@ -84,4 +78,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default SignUp
