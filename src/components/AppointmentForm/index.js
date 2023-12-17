@@ -1,14 +1,15 @@
 import React from 'react';
-import './appointment.css'; // Make sure to import your CSS file
+import Header from '../Header'
+import './index.css'; 
 
 const AppointmentForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    // You can access form data using e.target.elements
   };
 
   return (
+    <>
+    <Header />
     <div>
       <h1>Book Your Appointment</h1>
       <form id="appointmentForm" onSubmit={handleSubmit}>
@@ -48,6 +49,7 @@ const AppointmentForm = () => {
         <input type="submit" value="Submit" />
       </form>
     </div>
+    </>
   );
 };
 

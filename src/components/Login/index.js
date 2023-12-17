@@ -2,17 +2,23 @@ import { useState } from 'react'
 import { getAuth, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { auth, googleProvider } from '../../config/firebase'
 import Google from '../../res/Google.png'
+import { useNavigate, Link } from 'react-router-dom';
 import Logo from '../../res/Synergy_Pulse.png'
 import './index.css'
 
 const Login = () => {
-
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const onSuccessfullLogin = () => {
+        navigate('/');
+    }
 
     const signInWithGoogle = async () => {
         try {
             await signInWithPopup(auth, googleProvider)
+            onSuccessfullLogin()
         } catch (e) {
             console.log(e)
         }
@@ -26,6 +32,7 @@ const Login = () => {
         const user = userCredential.user;
         // Handle successful login, you may redirect or perform additional actions.
         console.log('Logged in successfully', user);
+        onSuccessfullLogin()
         } catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -71,11 +78,10 @@ const Login = () => {
                         </div>
                         <div className="action-buttons">
                             <button className="primary-button" onClick={handleSignIn}>Next</button>
-                            <button className="secondary-button">Forgot Password?</button>
                         </div>
                     </div>
                     <div className="sign-up">
-                        <p>Don't have an account? <a href="#">Sign up</a></p>
+                        <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
                     </div>
                 </div>
             </div>

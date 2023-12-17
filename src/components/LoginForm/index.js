@@ -1,7 +1,9 @@
 import {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 import './index.css'
 
 const LoginForm = () => {
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -31,6 +33,7 @@ const LoginForm = () => {
       relationship,
       emergencyPhone,
     });
+    navigate('/')
   };
 
   const nextStep = (event) => {

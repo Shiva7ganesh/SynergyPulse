@@ -2,6 +2,7 @@ import { AiFillSchedule } from "react-icons/ai";
 import { MdDashboard } from "react-icons/md";
 import { TbReportSearch } from "react-icons/tb";
 import { FaUserDoctor } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 import Header from '../Header'
 import Basic from '../../res/Basic.jpg'
 import Budget from '../../res/Budget.jpg'
@@ -10,6 +11,15 @@ import Premium from '../../res/Premium.jpg'
 import './index.css'
 
 const Home = () => {
+    const navigate = useNavigate()
+
+    const navAppointment = () => {
+        navigate('/appointment')
+    }
+
+    const navDashboard = () => {
+        navigate('/dashboard')
+    }
 
     return (
         <>
@@ -17,11 +27,11 @@ const Home = () => {
             <div className='home-container'>
                 <h1>Welcome User</h1>
                 <div className='buttons-container'>
-                    <button className='big-button cyan'>
+                    <button className='big-button cyan' onClick={navAppointment}>
                         <AiFillSchedule size="50px"/>
                         <p className="btn-text">Schedule an Appointment!</p>
                     </button>
-                    <button className='big-button magenta'>
+                    <button className='big-button magenta' onClick={navDashboard}>
                         <MdDashboard size="50px"/>
                         <p className="btn-text">View your Dashboard!</p>
                     </button>

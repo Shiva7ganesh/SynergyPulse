@@ -185,3 +185,7 @@ width: 24px;
   display: flex;
   height: 100vh;
 }
+
+h1 {
+  color: white;
+}

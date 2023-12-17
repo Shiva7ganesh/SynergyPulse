@@ -185,3 +185,7 @@ width: 24px;
   display: flex;
   height: 100vh;
 }
+
+.error-message {
+  color: red;
+}
