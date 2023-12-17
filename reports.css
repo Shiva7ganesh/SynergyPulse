@@ -1,0 +1,70 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark Background Color */
+    color: #fff; /* Text Color */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10 auto;
+    gap: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: space-around;
+    background-color: #1f1f1f; /* Container Background Color */
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Container Shadow */
+}
+
+h1 {
+    color: #f9f7f4; /* Header Color */
+    margin-bottom: 20px;
+}
+
+.report-card {
+    background-color: #292929; /* Card Background Color */
+    border-radius: 8px;
+    box-shadow: 2px 4px 6px rgb(103,236,245); /* Card Shadow */
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 35%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.report-card:hover {
+    transform: scale(1.03);
+}
+
+h2 {
+    color: #8ccb0e; /* Heading Color */
+    margin-bottom: 10px;
+}
+
+p {
+    color: #ccc; /* Paragraph Color */
+    margin-bottom: 5px;
+}
+
+a.report-link {
+    color: #ff4081; /* Link Color */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a.report-link:hover {
+    color: #66ff66; /* Hovered Link Color */
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .report-card {
+        padding: 15px;
+    }
+}
