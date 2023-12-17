@@ -12,6 +12,12 @@
   margin: 15px 0px;
 }
 
+@media screen and (max-width: 768px) {
+  .img-container {
+    display: none;
+  }
+}
+
 button {
   font-family: inherit;
   border: 0;
@@ -21,9 +27,10 @@ button {
 }
 
 .img-container {
-  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fe6%2Fac%2Fe2%2Fe6ace297a442dec29fdb9d592d6f5760.jpg&f=1&nofb=1&ipt=516ac6cc91cbcdae9f408cf49ae2b16771b24a4c446a7add14b5d5d90b355a61&ipo=images');
+  background-image: url('../../res/background.jpeg');
   width: 60vw;
-  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
 }
 
 a {

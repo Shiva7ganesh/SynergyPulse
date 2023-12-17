@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.report-card {
+    background-color: black; /* Corrected the background color value */
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(103,236,245);
+    padding: 25px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.report-status, .appointment-status {
+    background-color: #007BFF;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 20px; /* Adjusted font size */
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.appointment-status-scheduled {
+    background-color: #28a745;
+}
+
+.appointment-status-cancelled {
+    background-color: #DC3545;
+}
+
+.report-status-completed {
+    background-color: #28a745;
+}
+
+.report-status-pending {
+    background-color: #FFC107;
+}
+
+.report-date, .report-details {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .report-card {
+        max-width: 100%;
+    }
+}
+
+.center {
+    text-align: center;
+}
