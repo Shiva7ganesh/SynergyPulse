@@ -21,6 +21,14 @@ const Home = () => {
         navigate('/dashboard')
     }
 
+    const navReport = () => {
+        navigate('/reportdashboard')
+    }
+
+    const navDoctors = () => {
+        navigate('/doctors')
+    }
+
     return (
         <>
             <Header />
@@ -35,11 +43,11 @@ const Home = () => {
                         <MdDashboard size="50px"/>
                         <p className="btn-text">View your Dashboard!</p>
                     </button>
-                    <button className='big-button orange'>
+                    <button className='big-button orange' onClick={navReport}>
                         <TbReportSearch size="50px"/>
                         <p className="btn-text">View Reports!</p>
                     </button>
-                    <button className='big-button lime'>
+                    <button className='big-button lime' onClick={navDoctors}>
                         <FaUserDoctor size="50px"/>
                         <p className="btn-text">View our Doctors!</p>
                     </button>

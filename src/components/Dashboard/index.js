@@ -1,10 +1,13 @@
 import React from 'react';
+import Header from '../Header'
 import './index.css'; // Make sure to import your CSS file
 
 const Dashboard = () => {
   return (
-    <div>
-      <h1>Dashboard</h1>
+    <>
+        <Header />
+        <div>
+      <h1>Dashboard</h1>    
       <h2 className="appointment-status">Appointment Status</h2>
       <div className="container">
         <div className="report-card">
@@ -49,6 +52,8 @@ const Dashboard = () => {
         {/* Add more report status examples here */}
       </div>
     </div>
+    </>
+
   );
 };
 
